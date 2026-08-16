@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tmdbapis"
+dynamic = ["version"]
+description = "TMDb API Wrapper"
+readme = "README.rst"
+requires-python = ">=3.8"
+keywords = ["tmdbapis", "tmdbapi", "tmdb", "wrapper", "api"]
+
+# Укажите реальные имя и email вместо заглушек
+authors = [
+    { name = "Kometa Team", email = "example@example.com" }
+]
+
+dependencies = [
+    "requests",
+    "setuptools",
+]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Documentation = "https://tmdbapis.kometa.wiki"
+Funding = "https://github.com/sponsors/meisnate12"
+Source = "https://github.com/Kometa-Team/TMDbAPIs"
+Issues = "https://github.com/Kometa-Team/TMDbAPIs/issues"
+
+# Автоматическое чтение версии из файла VERSION без выполнения Python-кода
+[tool.setuptools.dynamic]
+version = {file = "VERSION"}
+
+[tool.setuptools.packages.find]
+where = ["."]
